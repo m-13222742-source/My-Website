@@ -7,10 +7,27 @@
     body {
       font-family: 'Roboto', sans-serif;
     }
+    .left, .right {
+      float: left;
+      width: 20%; /* The width is 20%, by default */
+    }
+
+    .main {
+      float: left;
+      width: 60%; /* The width is 60%, by default */
+    }
+
+/* Use a media query to add a breakpoint at 800px: */
+    @media screen and (max-width: 800px) {
+      .left, .main, .right {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      }
+    }
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>This Is my website!</h1>
+<h1 style="font-size:10vw">This Is my website!</h1>
 <h2>Download my game at the webpage below</h2>
 <iframe frameborder="0" src="https://itch.io/embed/5426153" width="552" height="167"><a href="https://zarif-developer-8202026.itch.io/stickman-platfromer">Stickman Platfromer by Zarif_Game_Dev</a></iframe>
 <h2>My Github Account:</h2>
@@ -24,8 +41,17 @@
       Made by: <span id="copyright">&copy;</span> <a href="https://zarif-developer-8202026.itch.io"> Zarif_Game_Dev</a>
     </footer>
   </div>
+  
+<div class="left">
+  <p>Left Menu</p>
+</div>
 
-</body>
-</html>
+<div class="main">
+  <p>Main Content</p>
+</div>
+
+<div class="right">
+  <p>Right Content</p>
+</div>
 </body>
 </html>
